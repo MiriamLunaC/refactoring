@@ -15,4 +15,24 @@ describe("Tests para ExplorerService", ()=>{
         const explorersInNode = ExplorerController.getExplorersUsernamesByMission("node");
         expect(explorersInNode.length).toBeGreaterThan(0);
     });
+
+    test("Obtener la validación enviando un número (1)",()=>{
+        const validation = ExplorerController.applyValidationInNumber(1);
+        expect(validation.trick).toBe(1);
+    });
+
+    test("Obtener la validación enviando un número (3)",()=>{
+        const validation = ExplorerController.applyValidationInNumber(3);
+        expect(validation.trick).toBe("FIZZ");
+    });
+
+    test("Obtener la validación enviando un número (5)",()=>{
+        const validation = ExplorerController.applyValidationInNumber(5);
+        expect(validation.trick).toBe("BUZZ");
+    });
+
+    test("Obtener la validación enviando un número (15)",()=>{
+        const validation = ExplorerController.applyValidationInNumber(15);
+        expect(validation.trick).toBe("FIZZBUZZ");
+    });
 });

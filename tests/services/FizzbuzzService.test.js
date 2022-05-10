@@ -25,4 +25,24 @@ describe("Tests para FizzbuzzService", ()=>{
         expect(result.trick).toBe("FIZZBUZZ");
     });
 
+    test("Obtener la validación enviando un número (1)",()=>{
+        const validation = FizzbuzzService.applyValidationInNumber(1);
+        expect(validation).toBe(1);
+    });
+
+    test("Obtener la validación enviando un número (3)",()=>{
+        const validation = FizzbuzzService.applyValidationInNumber(3);
+        expect(validation).toBe("FIZZ");
+    });
+
+    test("Obtener la validación enviando un número (5)",()=>{
+        const validation = FizzbuzzService.applyValidationInNumber(5);
+        expect(validation).toBe("BUZZ");
+    });
+
+    test("Obtener la validación enviando un número (15)",()=>{
+        const validation = FizzbuzzService.applyValidationInNumber(15);
+        expect(validation).toBe("FIZZBUZZ");
+    });
+
 });
